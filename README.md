@@ -1,1 +1,2 @@
 # Jquery
+Simple Jquery Animations
