@@ -3,9 +3,9 @@
 
 <head>
   <meta charset="UTF-8">
-  <link rel="icon" href="img/Aicon.ico">
   <title>JQuery Animation</title>
-
+  <link rel="icon" href="img/Aicon.ico">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <style>
     #panel,
     #flip {
@@ -20,31 +20,31 @@
       display: none;
     }
   </style>
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script>
-    $(document).ready(function () {
-      $("#hide").click(function () {
-        $("p").hide(1000);
-      });
-      $("#show").click(function () {
-        $("p").show(1000);
-      });
-    });
-    $(document).ready(function () {
-      $("#flip").click(function () {
-        $("#panel").slideToggle("slow");
-      });
-    });
-    $(document).ready(function () {
-      $("button").click(function () {
-        var div = $("div");
-        div.animate({ left: '250px' }, "slow");
-        div.animate({ fontSize: '3.1em' }, "slow");
-      });
-    });
-  </script>
 </head>
+
+
+<script>
+  $(document).ready(function () {
+    $("#hide").click(function () {
+      $("p").hide(1000);
+    });
+    $("#show").click(function () {
+      $("p").show(1000);
+    });
+  });
+  $(document).ready(function () {
+    $("#flip").click(function () {
+      $("#panel").slideToggle("slow");
+    });
+  });
+  $(document).ready(function () {
+    $("button").click(function () {
+      var div = $("div");
+      div.animate({ left: '250px' }, "slow");
+      div.animate({ fontSize: '3.1em' }, "slow");
+    });
+  });
+</script>
 
 <body>
   <div id="flip">
