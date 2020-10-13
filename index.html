@@ -1,0 +1,71 @@
+<html>
+<!--Savn © 2020 All rights reserved-->
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="img/Aicon.ico">
+  <title>JQuery Animation</title>
+
+  <style>
+    #panel,
+    #flip {
+      padding: 5px;
+      text-align: center;
+      background-color: skyblue;
+      border: solid 1px skyblue;
+    }
+
+    #panel {
+      padding: 30px;
+      display: none;
+    }
+  </style>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $("#hide").click(function () {
+        $("p").hide(1000);
+      });
+      $("#show").click(function () {
+        $("p").show(1000);
+      });
+    });
+    $(document).ready(function () {
+      $("#flip").click(function () {
+        $("#panel").slideToggle("slow");
+      });
+    });
+    $(document).ready(function () {
+      $("button").click(function () {
+        var div = $("div");
+        div.animate({ left: '250px' }, "slow");
+        div.animate({ fontSize: '3.1em' }, "slow");
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <div id="flip">
+    <h4>Click to slide down panel or up</h4><br>
+    <p><img src="img/cool.gif" style="width:75px;height:75px"></p>
+  </div>
+
+  <div id="panel">
+    <p><img src="img/hello.png" style="height: 150px; width: 400px;"></p>
+  </div><br>
+
+  <h1>JQuery Effects</h1>
+  <button id="hide">Hide</button>
+  <button id="show">Show</button>
+  <button>Start Animation</button>
+
+  <div style="background:skyblue;height:200px;width:200px;position: absolute;">
+    <h4> JQUERY</h4>
+  </div>
+  <p><img src="img/me.png" style="height:180px;width:200px;"> </p> <br>
+</body>
+
+</html>
+<!--Savn © 2020 All rights reserved-->
